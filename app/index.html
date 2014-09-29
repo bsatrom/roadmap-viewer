@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta charset="utf-8">
+    <link href="bower_components/kendo-ui-core/styles/kendo.mobile.all.min.css" rel="stylesheet">
+    <link href="styles/main.css" rel="stylesheet">
+
+    <!-- cordova script (this will be a 404 during development if served with `grunt serve`) -->
+    <script src="cordova.js"></script>
+
+    <script src="bower_components/kendo-ui-core/js/jquery.min.js"></script>
+    <script src="bower_components/kendo-ui-core/js/kendo.ui.core.min.js"></script>
+
+    <script src="bower_components/everlive/min/everlive.all.min.js"></script>
+
+    <script src="scripts/app.js"></script>
+</head>
+<body id="development"><div data-role="layout" data-id="main">
+    <header data-role="header">
+        <div data-role="navbar">
+            <span data-role="view-title"></span>
+            <a data-role="button" href="#appDrawer" data-rel="drawer" data-align="left" data-icon="drawer-button"></a>
+        </div>
+    </header>
+
+    <!-- application views will be rendered here -->
+</div>
+
+<div data-role="drawer" id="appDrawer" data-title="Navigation">
+    <header data-role="header">
+        <div data-role="navbar">
+            <span data-role="view-title"></span>
+        </div>
+    </header>
+    <ul id="navigation-container" data-role="listview">
+    <li><a href="views/home.html" data-icon="home">home</a></li><li><a href="views/products.html" data-icon="products">products</a></li><li><a href="views/signin.html" data-icon="signin">signin</a></li><li><a href="views/signup.html" data-icon="signup">signup</a></li></ul>
+</div>
+        <!-- build:js  -->
+        <script src="scripts/home.js"></script>
+        <!-- endbuild -->
+
+        <!-- build:js  -->
+        <script src="scripts/products.js"></script>
+        <!-- endbuild -->
+
+        <!-- build:js  -->
+        <script src="scripts/signin.js"></script>
+        <!-- endbuild -->
+
+        <!-- build:js  -->
+        <script src="scripts/signup.js"></script>
+        <!-- endbuild -->
+
+        <!-- build:js  -->
+        <script src="scripts/signupForm.js"></script>
+        <!-- endbuild -->
+
+        <!-- build:js  -->
+        <script src="scripts/productList.js"></script>
+        <!-- endbuild -->
+</body>
+</html>

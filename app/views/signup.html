@@ -1,0 +1,44 @@
+<div class="view-content" data-role="view" data-title="signup" data-layout="main" data-model="app.models.signup"><div class="signup-view" data-model="app.signup" id="signupForm">
+    <form>
+        <ul data-role="listview" data-style="inset">
+            <li>
+                <label>Name
+                    <input type="text" data-bind="value: DisplayName" required>
+                </label>
+            </li>
+            <li>
+                <label>Email
+                    <input type="email" data-bind="value: Email" required>
+                </label>
+            </li>
+            <li>
+                <label>Username
+                    <input type="text" data-bind="value: Username" required>
+                </label>
+            </li>
+            <li>
+                <label>Password
+                    <input type="password" data-bind="value: Password" required>
+                </label>
+            </li>
+            <li>
+                <label>Birth Date
+                    <input type="date" data-bind="value: BirthDate">
+                </label>
+            </li>
+            <li class="select-wrp">
+                <label>Gender
+                    <select data-bind="value: Gender">
+                        <option value="0" selected>Gender</option>
+                        <option value="1">Male</option>
+                        <option value="2">Female</option>
+                    </select>
+                </label>
+            </li>
+        </ul>
+    </form>
+    <div>
+        <a class="btn" data-role="button" href="views/home.html">Register</a>
+    </div>
+</div>
+</div>

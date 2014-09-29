@@ -1,0 +1,9 @@
+{
+    "name": "development",
+    "private": true,
+    "dependencies": {
+        "kendo-ui-core": "*"
+       ,"everlive": "*"
+    },
+    "devDependencies": {}
+}
