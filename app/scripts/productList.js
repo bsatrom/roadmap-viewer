@@ -15,9 +15,7 @@
      
         }
     };
-
     
-
     app.models.products.productList = new kendo.data.DataSource({
         type: 'json',
         schema: {
@@ -26,7 +24,7 @@
         transport: {
             
                     read: {
-                        url: "https://telerik.aha.io/api/v1/products/products"
+                        url: "https://telerik.aha.io/api/v1/products"
                     }
             
             },
