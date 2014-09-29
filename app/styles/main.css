@@ -1,2 +1,14 @@
 .km-drawer-button:before, .km-drawer-button:after  { content: "\E077"; }
 .km-inbox:before, .km-inbox:after { content: "\E0B0"; }
+
+div.center {
+	text-align: center;
+}
+
+p.headline {
+	font-style: italic;
+}
+
+.hero {
+	font-size: 1.2em;
+}
