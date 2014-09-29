@@ -4,6 +4,10 @@ app.models.home = (function () {
     return {
         connectAha: function() {
           win = window.open(app.aha.auth_url, '_blank', 'location=yes');
+          
+          win.addEventListener('loadstop', function(e) {
+            alert(e.url);
+          });
         },
 
         title: title
