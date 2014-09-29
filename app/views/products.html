@@ -1,0 +1,14 @@
+<div class="view-content" data-role="view" data-title="products" data-layout="main" data-model="app.models.products">
+<ul data-role="listview" id="productList" data-style="inset" data-template="productListTemplate" data-bind="source: productList"></ul>
+
+<!-- this is the template used by the listview. template items are automatically
+     wrapped in an <li> by Kendo UI Mobile -->
+<script type="text/x-kendo-template" id="productListTemplate">
+    <div>
+        
+        <p>#: data.name #</p>
+        
+        <p>#: data.product_line #</p>
+        
+    </div>
+</script></div>
