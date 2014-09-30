@@ -2,7 +2,11 @@
     var os = kendo.support.mobileOS;
     
     var showAlert = function(message, title, callback) {
+      if (navigator.notification) { 
         navigator.notification.alert(message, callback || function() {}, title, 'OK');
+      } else {
+        console.log(message);
+      }
     }
 
     var showError = function(message) {
@@ -12,11 +16,11 @@
     window.addEventListener('error', function(e) {
         e.preventDefault();
 
-        analytics.Monitor.TrackException(e, e.message);
+        analytics.Monitor().TrackException(e, e.message);
 
-        var msg = e.message + ' from ' + e.filename : ':ln' e.lineno;
+        var msg = e.message + ' from ' + e.filename + ':' + e.lineno;
 
-        showAlert(message, 'Error occured');
+        showAlert(msg, 'Error occured'); 
 
         return true;
     });
@@ -42,8 +46,8 @@
 
     // Initialize Everlive SDK
     var el = new Everlive({
-        apiKey: appSettings.everlive.apiKey,
-        scheme: appSettings.everlive.scheme
+        apiKey: window.app.settings.everlive.apiKey,
+        scheme: window .app.settings.everlive.scheme
     });
 
     var appHelper = {
@@ -89,14 +93,14 @@
 
     if (window.cordova) {
         document.addEventListener('deviceready', function () {
-            navigator.splashscreen.hide();
-            bootstrap();
-
+          navigator.splashscreen.hide();
+          bootstrap();
+          feedback.initialize('0a984460-4867-11e4-b447-d9fbe196dadc');
         }, false);
     }
     else {
         bootstrap();
     }
 
-    window.app = app;
+    $.extend(window.app, app);
 }());

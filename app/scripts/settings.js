@@ -1,3 +1,5 @@
+window.app = window.app || {};
+
 (function() {
   var appSettings = {
 
@@ -26,5 +28,5 @@
       }
   };
 
-  app.settings = appSettings;
+  window.app.settings = appSettings;
 }());

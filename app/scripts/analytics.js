@@ -1,16 +1,24 @@
 (function (win) {
 
     var analytics = win.analytics = win.analytics || {};
+    var dummyMonitor = {
+      TrackException: function(e) {
+        console.log(e); 
+      },
+      TrackFeature: function(e) {
+        console.log(e);        
+      }
+    };
     
     analytics.Start = function() {
         
         // Handy shortcuts to the analytics api
-        var factory = win.plugins.EqatecAnalytics.Factory;
-        var monitor = win.plugins.EqatecAnalytics.Monitor;
+        var factory = win.plugins ? win.plugins.EqatecAnalytics.Factory : {};
+        var monitor = win.plugins ? win.plugins.EqatecAnalytics.Monitor : dummyMonitor;
 
         // Create the monitor instance using the unique product key
-        var productId = appSettings.eqatec.productKey;
-        var version = appSettings.eqatec.version || '1.0.0.0';
+        var productId = win.app.settings.eqatec.productKey;
+        var version = win.app.settings.eqatec.version || '1.0.0.0';
         
         var settings = factory.CreateSettings(productId, version);
         settings.LoggingInterface = factory.CreateTraceLogger();
@@ -29,17 +37,17 @@
     };
     
     analytics.Stop = function() {
-        var monitor = win.plugins.EqatecAnalytics.Monitor;
+        var monitor = win.plugins ? win.plugins.EqatecAnalytics.Monitor : dummyMonitor;
         monitor.Stop();
     };
     
     analytics.TrackFeature = function (feature) {
-        var monitor = win.plugins.EqatecAnalytics.Monitor;
+        var monitor = win.plugins ? win.plugins.EqatecAnalytics.Monitor : dummyMonitor;
         monitor.TrackFeature(feature);
     };
 
     analytics.Monitor = function() {
-        return win.plugins.EqatecAnalytics.Monitor;
+        return win.plugins ? win.plugins.EqatecAnalytics.Monitor : dummyMonitor;
     };
     
 }(window));
