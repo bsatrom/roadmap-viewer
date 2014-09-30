@@ -1,7 +1,7 @@
-<div class="view-content welcome-scrn form-view" data-role="view" data-title="Sign-in" data-layout="main" data-model="app.models.signin">
+<div class="view-content welcome-scrn form-view" data-role="view" data-title="Sign-in" data-layout="main" data-model="app.models.signin" id="signin">
 	<header data-role="header"></header>
   <h1 class="app-logo hide-text center-block">Telerik <small>Platform</small></h1>
-  <h2 class="app-name center-text">Roadmap Viewer App</small></h2>
+  <h2 class="app-name center-text">Roadmap Viewer</small></h2>
   <form id="login-form">
       <ul data-role="listview" data-style="inset">
           <li class="username"><input type="text" id="loginUsername" placeholder="Username" required validationMessage="Username is required!" /></li>
@@ -23,9 +23,8 @@
           </span>
       </li>
       <li class="signup">
-          <a data-role="button" href="views/signupView.html" class="btn-signup">Create an account</a>
+          <a data-role="button" href="views/signup.html" class="btn-signup">Create an account</a>
       </li>
   </ol>
-
-  	<div data-role="footer"><p>&copy; <span data-bind="text: getYear"></span> Carrot Pants Studios</p></div>
+  <div data-role="footer"><p>&copy; <span data-bind="text: app.getYear"></span> Carrot Pants Studios</p></div>
 </div>

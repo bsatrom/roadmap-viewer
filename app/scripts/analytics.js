@@ -2,7 +2,7 @@
 
     var analytics = win.analytics = win.analytics || {};
     var dummyMonitor = {
-      TrackException: function(e) {
+      TrackExceptionMessage: function(e) {
         console.log(e); 
       },
       TrackFeature: function(e) {

@@ -181,11 +181,11 @@ p.headline {
   background-repeat: no-repeat;
 }
 
-.btn-login-fb {
+#roadmapApp .btn-login-fb {
   background-image: url(images/icon-facebook.png);
 }
 
-.btn-login-google {
+#roadmapApp .btn-login-google {
   background-image: url(images/icon-google.png);
 }
 
@@ -252,6 +252,7 @@ p.headline {
 
 .welcome-scrn .km-footer p {
     font-size: .75rem;
+    position: relative;
 }
 
 /* Welcome screen */
@@ -262,6 +263,7 @@ p.headline {
 }
 
 .app-logo {
+    margin-left: .5em;
     width: 247px;
     height: 32px;
     background: transparent url(images/logo-telerik_devcloud.png) no-repeat 0 0;
@@ -313,7 +315,7 @@ p.headline {
 }
 
 .welcome-scrn .group-wrp li {
-  margin: 1.5em 0 0;
+	margin: 1.5em 0 0;
 }
 
 .welcome-scrn .group-wrp .btn {
@@ -321,13 +323,14 @@ p.headline {
 }
 
 .welcome-scrn .group-wrp .oauth {
+    margin-top: .5em;
     margin-right: -1%;
     margin-left: -1%;
 }
 
 .welcome-scrn .group-wrp .oauth .oauth-item {
     float: left;
-    width: 23%;
+    width: 48%;
     margin: 0 1%;
 }
 
@@ -381,153 +384,7 @@ p.headline {
     color: #b6c5c6;
 }
 
-/* Activities */
-
-.activities-view .km-content,
-.activity-view .km-content,
-.add-activity-view .km-content,
-.activities-view .km-listview {
-    background-color: #fff;
-}
-
-.activities-view .km-list > li {
-    padding: .75em 0;
-    border-width: 0 0 1px;
-    border-color: #eaeced;
-    color: #34495e;
-    background-color: #fff;
-    -webkit-box-shadow: none;
-    box-shadow: none;
-    overflow: visible;
-}
-
-.activities-view .km-list > li:first-child {
-    padding-top: 0;
-}
-
-.user-avatar {
-    float: left;
-    width: 50px;
-}
-
-.user-avatar img {
-    width: 50px;
-    height: 50px;
-    -webkit-border-radius: 25px;
-    -moz-border-radius: 25px;
-    border-radius: 25px;
-}
-
-.activity-content {
-    position: relative;
-    padding-left: 5em;
-    font-size: .85rem;
-}
-
-.activity-content .person-name,
-.add-activity-view .person-name,
-.activity-content .time-span {
-    font-weight: 600;
-}
-
-.add-activity-view .person-name,
-.activity-content .person-name {
-    display: block;
-    margin: 0 0 .5em;
-    color: #3598db;
-    font-size: 1.1rem;
-}
-
-.person-name {
-    width: 70%;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-}
-
-.activity-content .time-span {
-    position: absolute;
-    top: 5px;
-    right: 0;
-    color: #6c7884;
-    font-size: .7rem;
-    text-transform: uppercase;
-}
-
-.user-share-txt {
-    color: #34495e;
-}
-
-.activity-view .person-name,
-.add-activity-view .person-name {
-    margin: .85em 0 1em;
-}
-
-.add-activity-view .person-name {
-    padding-left: .75em;
-}
-
-.activity-view .picture {
-    margin: 1em 0 0;
-}
-
-.user-share {
-    position: relative;
-    margin: 2.35em 0 0;
-}
-
-.user-share:before {
-    content: '';
-    position: absolute;
-    width: 0;
-    height: 0;
-}
-
-.user-share:before {
-    top: -10px;
-    left: 16px;
-    border-right: 9px solid transparent;
-    border-bottom: 10px solid #f5f7f8;
-    border-left: 9px solid transparent;    
-}
-
-.user-share textarea {
-    float: none;
-    height: 13.5em;
-    min-height: 3em;
-    margin: 0;
-    padding: .75em 1em;
-    background-color: #f5f7f8;
-    resize: none;
-}
-
-.activity-view .km-footer {
-    padding: 0 1em 1em;
-    background: #fff none;
-}
-
-.add-activity-view .km-leftitem {
-    left: 1em;
-}
-
-.add-activity-view .km-rightitem {
-    right: 1em;
-}
-
-.km-black-translucent-status-bar .km-navbar .km-leftitem,
-.km-black-translucent-status-bar .km-navbar .km-rightitem {
-    margin-top: .4em;
-}
-
-.k-invalid-msg {
-  display: none;
-  margin: 1rem 0 0;
-  padding: 0 1rem;
-  color: #e84c3d;
-}
-
 /* Retina Images */
-
 @media 
 (-webkit-min-device-pixel-ratio: 2), 
 (min-resolution: 144dpi) { 

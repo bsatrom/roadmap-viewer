@@ -16,7 +16,8 @@
     window.addEventListener('error', function(e) {
         e.preventDefault();
 
-        analytics.Monitor().TrackException(e, e.message);
+        // TODO: Re-enable exception tracking
+        //analytics.Monitor().TrackException(e, e.message);
 
         var msg = e.message + ' from ' + e.filename + ':' + e.lineno;
 
@@ -76,26 +77,19 @@
         helper: appHelper,
         everlive: el,
         getYear: getYear
-    };
-
-    var bootstrap = function () {
-        app.mobileApp = new kendo.mobile.Application(document.body, {
-            skin: 'flat',
-            statusBarStyle: os.ios && os.flatVersion >= 700 ? 'black-translucent' : 'black',
-            initial: 'views/signin.html'
-            });
-        };
-
-    if (window.cordova) {
-        document.addEventListener('deviceready', function () {
-          navigator.splashscreen.hide();
-          bootstrap();
-          feedback.initialize(window.app.settings.feedback.apiKey);
-        }, false);
-    }
-    else {
-        bootstrap();
-    }
+    }; 
+    
+    app.mobileApp = new kendo.mobile.Application(document.body, {
+        skin: 'flat',
+        statusBarStyle: os.ios && os.flatVersion >= 700 ? 'black-translucent' : 'black',
+        initial: 'views/signin.html'
+    });
+    
+    document.addEventListener('deviceready', function () {
+      navigator.splashscreen.hide();
+      feedback.initialize(window.app.settings.feedback.apiKey);
+    }, false);
+    
 
     $.extend(window.app, app);
 }());

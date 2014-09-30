@@ -1,44 +1,29 @@
-<div class="view-content" data-role="view" data-title="Sign-up" data-layout="main" data-model="app.models.signup"><div class="signup-view" data-model="app.signup" id="signupForm">
-    <form>
-        <ul data-role="listview" data-style="inset">
+<div class="signup-view" data-role="view" data-title="Sign-up" data-layout="main" data-model="app.models.signup" data-init="app.models.signup.init" data-show="app.models.signup.show" data-hide="app.models.signup.hide">
+    <div data-role="header">
+        <div data-role="navbar">
+            Roadmap Viewer
+            <a class="nav-button nav-button-back hide-text" data-align="left" data-role="backbutton" href="#signin">Back</a>
+        </div>
+    </div>
+    <h2 class="center-text">Create an Account</h2>
+    <p class="headline">You'll need to create and account and authorize access to Aha! before roadmap data can be displayed.</p>
+    <form id="signup">
+        <ul id="signup-form" data-role="listview" data-style="inset">
             <li>
-                <label>Name
-                    <input type="text" data-bind="value: DisplayName" required>
-                </label>
+                <input type="text" id="signupName" data-bind="value: DisplayName" placeholder="Name" required/>
             </li>
             <li>
-                <label>Email
-                    <input type="email" data-bind="value: Email" required>
-                </label>
+                <input type="email" id="signupEmail" data-bind="value: Email" placeholder="Email"/>
             </li>
             <li>
-                <label>Username
-                    <input type="text" data-bind="value: Username" required>
-                </label>
+                <input type="text" id="signupUsername" data-bind="value: Username" placeholder="Username" required/>
             </li>
             <li>
-                <label>Password
-                    <input type="password" data-bind="value: Password" required>
-                </label>
-            </li>
-            <li>
-                <label>Birth Date
-                    <input type="date" data-bind="value: BirthDate">
-                </label>
-            </li>
-            <li class="select-wrp">
-                <label>Gender
-                    <select data-bind="value: Gender">
-                        <option value="0" selected>Gender</option>
-                        <option value="1">Male</option>
-                        <option value="2">Female</option>
-                    </select>
-                </label>
+                <input type="password" id="signupPassword" data-bind="value: Password" placeholder="Password" required/>
             </li>
         </ul>
     </form>
-    <div>
-        <a class="btn" data-role="button" href="views/home.html">Register</a>
+    <div id="signupBtnWrp" class="signup-btn-wrp disabled">
+        <a class="btn btn-signup" data-role="button" data-bind="click: signup">Register</a>
     </div>
-</div>
 </div>
