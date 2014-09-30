@@ -22,12 +22,13 @@
             model: model
         },
         transport: {
-            
-                    read: {
-                        url: "https://telerik.aha.io/api/v1/products"
-                    }
-            
-            },
+          read: {
+              url: "https://telerik.aha.io/api/v1/products",
+              beforeSend: function(xhr) {
+                xhr.setRequestHeader('Authorization', 'Bearer ' + app.aha.token);
+              }
+          }
+        },
         change: function (e) {
 
         },

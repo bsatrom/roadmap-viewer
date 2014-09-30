@@ -8,6 +8,9 @@ app.aha = (function () {
     return {
         auth_url: auth_url_base + '?client_id=' + client_id +
           '&redirect_uri=' + redirect_uri + '&response_type=' +
-          response_type
+          response_type,
+        setToken: function(token) {
+          alert(token);
+        }
     }
 })();
