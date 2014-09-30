@@ -27,11 +27,9 @@
 
     // Handle device back button tap
     var onBackKeyDown = function(e) {
-
         e.preventDefault();
 
         navigator.notification.confirm('Do you really want to exit?', function (confirmed) {
-
             var exit = function () {
                 navigator.app.exitApp();
             };
@@ -54,7 +52,6 @@
 
         // Return user profile picture url
         resolveProfilePictureUrl: function (id) {
-
             if (id && id !== emptyGuid) {
                 return el.Files.getDownloadUrl(id);
             } else {
@@ -73,8 +70,6 @@
         return currentTime.getFullYear();
     }());
 
-    // store a reference to the application object that will be created
-    // later on so that we can use it if need be
     var app = {
         models: {},
         showAlert: showAlert,
@@ -95,7 +90,7 @@
         document.addEventListener('deviceready', function () {
           navigator.splashscreen.hide();
           bootstrap();
-          feedback.initialize('0a984460-4867-11e4-b447-d9fbe196dadc');
+          feedback.initialize(window.app.settings.feedback.apiKey);
         }, false);
     }
     else {

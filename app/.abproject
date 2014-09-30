@@ -1,10 +1,10 @@
 {
   "ProjectName": "app",
   "projectVersion": 1,
-  "AppIdentifier": "com.telerik.app",
-  "DisplayName": "app",
+  "AppIdentifier": "com.telerik.telerikRoadmaps",
+  "DisplayName": "Telerik Roadmaps",
   "Author": "",
-  "Description": "app",
+  "Description": "Aha! Roadmap Viewer",
   "BundleVersion": "1.0",
   "Framework": "Cordova",
   "FrameworkVersion": "3.2.0",
