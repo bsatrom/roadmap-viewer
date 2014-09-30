@@ -16,11 +16,9 @@
     window.addEventListener('error', function(e) {
         e.preventDefault();
 
-        // TODO: Re-enable exception tracking
-        //analytics.Monitor().TrackException(e, e.message);
-
+        analytics.Monitor().TrackExceptionMessage(e, e.message);
+        
         var msg = e.message + ' from ' + e.filename + ':' + e.lineno;
-
         showAlert(msg, 'Error occured'); 
 
         return true;
@@ -88,6 +86,7 @@
     document.addEventListener('deviceready', function () {
       navigator.splashscreen.hide();
       feedback.initialize(window.app.settings.feedback.apiKey);
+      analytics.Start();
     }, false);
     
 

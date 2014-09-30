@@ -1,2 +1,0 @@
-app.models.signup.signupForm =  {
-};
