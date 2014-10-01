@@ -24,11 +24,16 @@ app.models.signin = (function () {
       .then(function () {
           analytics.TrackFeature('Login.Regular');
           
-          // TODO: Define this
-          return app.Users.load();
+          return app.models.Users.load();
       })
       .then(function () {
-        app.mobileApp.navigate('views/home.html');
+        // Determine where to navigate the user based on whether they have a
+        // verification code set
+        if (!app.models.Users.currentUser.data['AhaToken']) {
+          app.mobileApp.navigate('views/ahaAuth.html');
+        } else {
+          app.mobileApp.navigate('views/home.html');
+        }
       })
       .then(null,
         function (err) {
@@ -52,10 +57,6 @@ app.models.signin = (function () {
 })();
 
 /*
-
-
-        
-
         // Authenticate using Facebook credentials
         var loginWithFacebook = function() {
 

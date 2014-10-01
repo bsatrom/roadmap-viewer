@@ -307,6 +307,17 @@ p.headline {
     background-image: url(images/icon-password.png);
 }
 
+#ahaAuth .group-wrp {
+	margin: -1em 1em 0;
+  padding: 0;
+  text-align: center;
+  list-style-type: none;
+}
+
+#ahaAuth .group-wrp li {
+	margin: 1.5em .5em 0;
+}
+
 .welcome-scrn .group-wrp {
     margin: -1em 1em 0;
     padding: 0;
