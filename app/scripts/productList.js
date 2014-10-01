@@ -25,7 +25,7 @@
           read: {
               url: "https://telerik.aha.io/api/v1/products",
               beforeSend: function(xhr) {
-                xhr.setRequestHeader('Authorization', 'Bearer ' + app.aha.token);
+                xhr.setRequestHeader('Authorization', 'Bearer ' + app.models.ahaAuth.getToken());
               }
           }
         },

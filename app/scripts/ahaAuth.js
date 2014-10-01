@@ -23,7 +23,7 @@ app.models.ahaAuth = (function () {
         });
       }
 
-      app.mobileApp.navigate('views/home.html');
+      app.mobileApp.navigate('views/products.html');
     };
 
     var getToken = function() {
