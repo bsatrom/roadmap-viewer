@@ -16,7 +16,8 @@
         },
         change: function (e) {
             analytics.TrackFeature('Aha.RetireveProductList');
-        }//,
-        //sort: { field: 'name', dir: 'desc' }
+        },
+        filter: { field: 'product_line', operator: 'eq', value: true},
+        sort: { field: 'name', dir: 'desc' }
     });
 })();
