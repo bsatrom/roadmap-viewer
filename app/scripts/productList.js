@@ -2,17 +2,14 @@
     var model = {
         id: 'Id',
         fields: {
-    
-        name: {
-                field: 'name',
-                defaultValue: ''
+            name: {
+              field: 'name',
+              defaultValue: ''
             },
-     
-        product_line: {
-                field: 'product_line',
-                defaultValue: ''
+            product_line: {
+              field: 'product_line',
+              defaultValue: ''
             },
-     
         }
     };
     
@@ -25,13 +22,13 @@
           read: {
               url: "https://telerik.aha.io/api/v1/products",
               beforeSend: function(xhr) {
-                xhr.setRequestHeader('Authorization', 'Bearer ' + app.aha.token);
+                xhr.setRequestHeader('Authorization', 'Bearer ' + app.models.ahaAuth.getToken());
               }
           }
         },
         change: function (e) {
-
+            
         },
-        sort: { field: 'CreatedAt', dir: 'desc' }
+        sort: { field: 'name', dir: 'desc' }
     });
 })();

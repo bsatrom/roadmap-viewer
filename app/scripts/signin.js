@@ -32,7 +32,7 @@ app.models.signin = (function () {
         if (!app.models.Users.currentUser.data['AhaToken']) {
           app.mobileApp.navigate('views/ahaAuth.html');
         } else {
-          app.mobileApp.navigate('views/home.html');
+           app.mobileApp.navigate('views/products.html');
         }
       })
       .then(null,
