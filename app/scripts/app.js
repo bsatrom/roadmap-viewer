@@ -86,7 +86,7 @@
     document.addEventListener('deviceready', function () {
       if (window.StatusBar) { StatusBar.backgroundColorByName('red'); }
       navigator.splashscreen.hide();
-      feedback.initialize(window.app.settings.feedback.apiKey);
+      //feedback.initialize(window.app.settings.feedback.apiKey);
       analytics.Start();
     }, false);
     
