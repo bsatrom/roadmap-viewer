@@ -1,22 +1,10 @@
 (function () {
-    var model = {
-        id: 'Id',
-        fields: {
-            name: {
-              field: 'name',
-              defaultValue: ''
-            },
-            product_line: {
-              field: 'product_line',
-              defaultValue: ''
-            },
-        }
-    };
-    
     app.models.products.productList = new kendo.data.DataSource({
         type: 'json',
         schema: {
-            model: model
+            data: function(response) {
+              return response.products;
+            }
         },
         transport: {
           read: {
@@ -27,8 +15,9 @@
           }
         },
         change: function (e) {
-            
+            analytics.TrackFeature('Aha.RetireveProductList');
         },
+        filter: { field: 'product_line', operator: 'eq', value: true},
         sort: { field: 'name', dir: 'desc' }
     });
 })();

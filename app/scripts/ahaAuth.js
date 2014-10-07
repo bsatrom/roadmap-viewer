@@ -14,7 +14,6 @@ app.models.ahaAuth = (function () {
       if (userData['AhaToken'] !== token) {
         userData['AhaToken'] = token;
 
-        alert("Code: " + userData['AhaToken']);
         Everlive.$.Users.updateSingle({'Id': userData.Id, 'AhaToken': userData['AhaToken']}, 
         function(data) {
           analytics.TrackFeature('Aha.Authorization');

@@ -2,15 +2,15 @@
 .km-inbox:before, .km-inbox:after { content: "\E0B0"; }
 
 div.center {
-	text-align: center;
+  text-align: center;
 }
 
 p.headline {
-	font-style: italic;
+  font-style: italic;
 }
 
 .hero {
-	font-size: 1.2em;
+  font-size: 1.2em;
 }
 
 /* Added from Friends App */
@@ -55,13 +55,18 @@ p.headline {
 .km-flat .km-navbar,
 .km-flat .km-content {
     border: 0 none;
-    color: #fff;
+    color: #0073CF;
     font-family: "Open Sans", sans-serif;
-    background-color: #2d3e50;
+    background-color: rgba(5, 34, 144, 0.04);
+}
+
+.km-view-title {
+  color: #fff;
 }
 
 .center-block {
     display: block;
+    margin-top: 1em;
     margin-right: auto;
     margin-left: auto;
 }
@@ -222,7 +227,7 @@ p.headline {
 
 .km-flat.km-on-ios.km-black-translucent-status-bar .km-header {
     min-height: 20px;
-    background-color: #2d3e50;
+    background-color: #0073CF;
 }
 
 .km-flat .km-header .km-navbar {
@@ -247,7 +252,7 @@ p.headline {
 .welcome-scrn .km-footer {
     color: #fff;
     text-align: center;
-    background-color: transparent;
+    background-color: #0073CF;
 }
 
 .welcome-scrn .km-footer p {
@@ -257,16 +262,12 @@ p.headline {
 
 /* Welcome screen */
 
-.app-logo,
-.app-name {
-    margin-top: 1.5em;
-}
-
 .app-logo {
-    margin-left: .5em;
-    width: 247px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80px;
     height: 32px;
-    background: transparent url(images/logo-telerik_devcloud.png) no-repeat 0 0;
+    background: transparent url(images/aha-logo.png) no-repeat 0 0;
 }
 
 .app-name {
@@ -308,14 +309,14 @@ p.headline {
 }
 
 #ahaAuth .group-wrp {
-	margin: -1em 1em 0;
+  margin: -1em 1em 0;
   padding: 0;
   text-align: center;
   list-style-type: none;
 }
 
 #ahaAuth .group-wrp li {
-	margin: 1.5em .5em 0;
+  margin: 1.5em .5em 0;
 }
 
 .welcome-scrn .group-wrp {
@@ -326,7 +327,7 @@ p.headline {
 }
 
 .welcome-scrn .group-wrp li {
-	margin: 1.5em 0 0;
+  margin: 1.5em 0 0;
 }
 
 .welcome-scrn .group-wrp .btn {
@@ -401,8 +402,8 @@ p.headline {
 (min-resolution: 144dpi) { 
     
     .app-logo {
-        background-image: url(images/logo-telerik_devcloud@2x.png);
-        background-size: 247px 32px;
+        background-image: url(images/aha-logo@2x.png);
+        background-size: 80px 32px;
     }
     
     .username:before {

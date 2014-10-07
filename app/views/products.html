@@ -1,12 +1,9 @@
-<div class="view-content" data-role="view" data-title="Product List" data-layout="main" data-model="app.models.products">
+<div class="view-content" data-role="view" data-title="Product Lines" data-layout="main" data-model="app.models.products">
 
 <ul data-role="listview" id="productList" data-style="inset" data-template="productListTemplate" data-bind="source: productList"></ul>
 
 <script type="text/x-kendo-template" id="productListTemplate">
-    <div>
-        <p>#: products.name #</p>
-        <p>#: products.product_line #</p>
-    </div>
+    <div>#: name #</div>
 </script>
 
 </div>
