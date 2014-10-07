@@ -20,7 +20,7 @@ app.models.signin = (function () {
       var password = $loginPassword.val();
 
       // Authenticate using the username and password
-      Everlive.$.Users.login(username, password)
+      app.everlive.Users.login(username, password)
       .then(function () {
           analytics.TrackFeature('Login.Regular');
           
